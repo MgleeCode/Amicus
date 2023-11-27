@@ -6,19 +6,20 @@ body {
 
 .orange-bar {
   background-color: orange;
-  height: 50px;
+  height: 75px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
-.header {
-  margin: 0;
-  padding: 0;
+.nav-link {
   color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-style: normal;
 }
-
+.titlehead {
+}
 .content-container {
   margin: 0px;
   padding: 0px;
@@ -29,9 +30,9 @@ body {
 }
 .popeyeschicken {
   margin: 0px;
-  padding: 0px;
-  width: 30%;
+  padding: 50px;
   height: auto;
+  width: 100%;
   background-color: blue;
 }
 
@@ -45,17 +46,18 @@ body {
   left: 200px;
 }
 .resized-image-placeholder2 {
-  width: 150px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
   max-width: 100%;
   display: block;
   margin: 0 auto;
   left: 100px;
 }
-.popeyeschicken-placeholder {
-  width: 200px;
-  height: auto;
-  max-width: 100%;
+.orderbutton .popeyeschicken-placeholder {
+  width: 1050px;
+  height: 525px;
   display: block;
-  margin: 0 auto;
+  margin: 0;
+  padding: 50px;
+  justify-content: center;
 }
