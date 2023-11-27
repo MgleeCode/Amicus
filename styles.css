@@ -13,15 +13,49 @@ body {
   align-items: center;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  padding: 0;
+.header {
   margin: 0;
+  padding: 0;
+  color: white;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: white;
+.content-container {
+  margin: 0px;
+  padding: 0px;
+  width: 300px;
+  height: auto;
+  background-color: red;
+  display: flex;
+}
+.popeyeschicken {
+  margin: 0px;
+  padding: 0px;
+  width: 30%;
+  height: auto;
+  background-color: blue;
+}
+
+.resized-image-placeholder1 {
   padding: 10px;
+  width: 100px;
+  height: 100px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  left: 200px;
+}
+.resized-image-placeholder2 {
+  width: 150px;
+  height: 100px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  left: 100px;
+}
+.popeyeschicken-placeholder {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
