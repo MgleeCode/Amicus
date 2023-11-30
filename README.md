@@ -1,2 +1,0 @@
-# Amicus
-first git project
