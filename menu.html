@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="promo.css" />
     <title>Home Page</title>
   </head>
   <body>
@@ -11,20 +12,20 @@
       <div class="content-container">
         <a href="index.html">
           <img
-            src="Popeyes-logo2.png"
+            src="Popeyes-logo1.png"
             alt="Popeyes Logo"
             class="resized-image-placeholder1"
           />
         </a>
         <img
-          src="Popeyes-logo1.png"
+          src="Popeyes-logo2.png"
           alt="Popeyes Logo"
           class="resized-image-placeholder2"
         />
       </div>
       <div class="orderbutton">
         <div class="orderword">
-          <h1>ORDER</h1>
+          <a href="checkout.html" class="nav-link">Checkout</a>
         </div>
       </div>
     </div>
@@ -35,6 +36,72 @@
       <a href="promo.html" class="nav-link">Promotions</a>
       <a href="coupons.html" class="nav-link">Coupons</a>
       <a href="ourstory.html" class="nav-link">Our Story</a>
+    </div>
+    <div class="menupage">
+      <article id="chicken" class="menudisplay">
+        <h1>Chicken</h1>
+
+      <div class="Wings" data-item-id="1">
+        <h3>6pc Wings</h3>
+        <img
+          src="wings1.png"
+          alt="Wings1"
+          class="resized-menu"
+        />
+        <p>6Pc Crispy chicken wings marinated in a ghost pepper spice blend before they’re hand breaded and fried to a perfect crunch, these wings are the perfect balance of flavor and fire. Price: $11.90</p>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+
+       <div class="chicken" data-item-id="2">
+        <h3>Item 2</h3>
+        <p>Description of Item 2. Price: $15.00</p>
+        <button onclick="addToCart(2)">Add to Cart</button>
+        <button onclick="removecartitem(2)">Remove from Cart</button>
+      </div>
+        <h1>Chicken</h1>
+        <div class="chickenfood">
+          <img
+            src="Popeyes-logo2.png"
+            alt="Popeyes Logo"
+            class="resized-image-placeholder2"
+          />
+          <h1>Burgers</h1>
+          <div class="Burgers">
+            <img
+              src="Popeyes-logo2.png"
+              alt="Popeyes Logo"
+              class="resized-image-placeholder2"
+            />
+          <h1>Sides</h1>
+          <div class="Sides">
+            <img
+              src="Popeyes-logo2.png"
+              alt="Popeyes Logo"
+              class="resized-image-placeholder2"
+            />
+          </div>
+          <h1>Beverages</h1>
+          <div class="Beverages">
+            <div class="menubox">
+              <img
+                src="Popeyes-logo2.png"
+                alt="Popeyes Logo"
+                class="resized-image-placeholder2"
+              />
+            </div>
+        </div>
+      </article>
+      <div class="bottombar">
+        <div class="uselesstext">
+          Company|Investor Relations|Franchise Oppurtunities|Careers|Contact Us
+        </div>
+        <div class="uselesstext2">
+          Terms of Service | Privacy Policy Popeyes® Louisiana Kitchen © 2013 AFC
+          Enterprises, Inc. All rights reserved. All trademarks belong to their
+          respective owners.
+        </div>
+      </div>
+      <script src="script.js"></script>
     </div>
   </body>
 </html>

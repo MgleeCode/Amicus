@@ -1,0 +1,12 @@
+.menupage {
+  display: flex;
+  border: 2px dotted red;
+}
+.chicken {
+  border: 2px dotted red;
+}
+.menubox {
+  background-color: grey;
+  width: 200px;
+  border: 2px dotted red;
+}

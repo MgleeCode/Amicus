@@ -12,6 +12,23 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+.bottombar {
+  background-color: #ff7f00;
+  height: 85px;
+  width: 100%;
+}
+.uselesstext {
+  padding: 2px;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+}
+.uselesstext2 {
+  padding: 2px;
+  color: white;
+  font-size: smaller;
+  font-style: italic;
+}
 .nav-link {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
@@ -72,11 +89,36 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
-.popeyeschicken-placeholder {
-  width: 1050px;
-  height: 525px;
-  display: block;
+/*-------------------------------------------------------------*/
+body {
   margin: 0;
-  padding: 50px;
-  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
 }
