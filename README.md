@@ -6,7 +6,7 @@ Website live at:
 https://mgleecode.github.io/Amicus/
 
 Video Walkthrough:
-https://www.loom.com/share/b2b5cea9697340fb994a075baf069e30?sid=c638001d-4e24-4094-a24a-d520f56197fb
+https://www.loom.com/share/45c67ccc847849e8a4941a71d572e102
 
 Idea For Assignment 1
 My idea for my Assignment 1 was to redesign the current Singapore Popeyes Wesbsite and make it more modern. I also made a new cart shopping system for the user to conveniently shop for Popeyes fast food.
