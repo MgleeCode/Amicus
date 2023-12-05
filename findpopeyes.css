@@ -1,0 +1,61 @@
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.findapopeyes {
+  color: #ff7f00;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.locations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.locationbox {
+  width: 200px;
+  height: 200px;
+  background-color: #f4c5ab;
+  border: 2px dotted red;
+  border-radius: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.locationheader {
+  color: orange;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px dotted purple;
+  margin-bottom: 10px;
+}
+
+.locationinfo {
+  border: 2px dotted green;
+  text-align: center;
+  padding: 10px;
+}
+
+.locationbutton {
+  margin-top: auto;
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.locationbutton:hover {
+  background-color: #e67300;
+}

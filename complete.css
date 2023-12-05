@@ -1,28 +1,21 @@
-.coupontext {
+.thankyou {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.coupontext1 {
+.thankyou1 {
   color: #ff7f00;
   font-size: calc(10px + 5vw);
   font-weight: bolder;
   margin-top: 5%;
 }
-.coupontext2 {
-  font-size: calc(5px + 1vw);
-  font-weight: bolder;
-  width: 50%;
-  text-align: center;
-}
-.coupontext3 {
-  margin-top: 6%;
+.thankyou2 {
   font-size: calc(5px + 2vw);
   text-align: center;
   width: 40%;
   font-weight: bolder;
 }
-.couponbutton {
+.returnbutton {
   width: auto;
   height: auto;
   border-radius: 15px;
@@ -33,7 +26,7 @@
   justify-content: center;
   align-items: center;
 }
-.couponword {
+.returnword {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: white;

@@ -4,7 +4,6 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let slideIndex = 0;
 
-// Function to show slides
 function showSlides() {
   let slides = document.getElementsByClassName("slide");
 
@@ -19,10 +18,9 @@ function showSlides() {
   }
 
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change slide every 5 seconds
+  setTimeout(showSlides, 5000);
 }
 
-// Function to change slides manually
 function changeSlide(n) {
   slideIndex += n;
   const slides = document.getElementsByClassName("slide");
@@ -41,16 +39,12 @@ function changeSlide(n) {
 }
 
 document.addEventListener("DOMContentLoaded", showSlides);
-// Function to proceed to the complete page
 function proceedToComplete() {
-  // Check if there are items in the cart
   let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
   if (cartItems.length === 0) {
-    // If no items in the cart, alert the user (you can customize this part)
     alert("Your cart is empty. Please add items before proceeding.");
   } else {
-    // If items in the cart, empty the cart and navigate to the complete page
     localStorage.removeItem("cart");
     window.location.href = "complete.html";
   }

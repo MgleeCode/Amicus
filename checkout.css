@@ -52,14 +52,14 @@ button.remove-btn:hover {
 }
 
 #proceedBtn {
-  background-color: #4caf50; /* Green color */
+  background-color: #ff7f00;
   color: white;
   border: none;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: block; /* Change to block to center */
-  margin: auto; /* Set margin to auto for centering */
+  display: block;
+  margin: auto;
   font-size: 16px;
   margin-top: 20px;
   cursor: pointer;
@@ -67,5 +67,5 @@ button.remove-btn:hover {
 }
 
 #proceedBtn:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #e67300;
 }
