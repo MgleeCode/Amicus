@@ -1,85 +1,95 @@
-// Load cart items from Local Storage on page load
-window.onload = function () {
-  loadCart();
-};
+// Load cart data from local storage on page load
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(itemId) {
-  var selectedItem = document.querySelector(`[data-item-id="${itemId}"]`);
-  var cartItem = createCartItem(selectedItem);
-  console.log("cart-items", document.getElementById("cart-items"));
-  document.getElementById("cart-items").appendChild(cartItem);
-  saveCart();
-}
-
-function removeCartItem(itemId) {
-  var cartItem = document.querySelector(
-    `#cart-items [data-item-id="${itemId}"]`
-  );
-
-  if (cartItem) {
-    cartItem.remove();
-    saveCart();
-  } else {
-    console.log(`Cart item with itemId ${itemId} not found.`);
-  }
-}
-
-function createCartItem(selectedItem) {
-  var cartItem = document.createElement("li");
-  cartItem.textContent = selectedItem.querySelector("h3").textContent;
-
-  var removeButton = document.createElement("button");
-  removeButton.textContent = "Remove";
-  removeButton.onclick = function () {
-    removeCartItem(cartItem);
+  const item = {
+    id: itemId,
+    name: document.querySelector(`[data-item-id="${itemId}"] h3`).textContent,
+    price: parseFloat(
+      document
+        .querySelector(`[data-item-id="${itemId}"] p`)
+        .textContent.split("$")[1]
+    ),
+    quantity: 1,
   };
 
-  cartItem.appendChild(removeButton);
-  return cartItem;
-}
+  const existingItem = cart.find((cartItem) => cartItem.id === itemId);
 
-function saveCart() {
-  var cartItems = document.getElementById("cart-items").innerHTML;
-  localStorage.setItem("cartItems", cartItems);
-}
-
-function loadCart() {
-  var cartItems = localStorage.getItem("cartItems");
-  if (cartItems) {
-    document.getElementById("cart-items").innerHTML = cartItems;
-  }
-}
-/*----------------------------------------------------------------*/
-let slideIndex = 0;
-
-function showSlides() {
-  let i;
-  const slides = document.getElementsByClassName("slide");
-  const dots = document.getElementsByClassName("dot");
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  if (existingItem) {
+    existingItem.quantity++;
+  } else {
+    cart.push(item);
   }
 
-  slideIndex++;
+  // Save updated cart to local storage
+  localStorage.setItem("cart", JSON.stringify(cart));
 
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  console.log("slideIndex", slideIndex);
-  console.log("slides", slides[0]);
-  slides[slideIndex - 1].style.display = "block";
-  console.log("dots", dots[0]);
-  dots[slideIndex - 1].className += " active";
-
-  setTimeout(showSlides, 2000); // Change slide every 2 seconds
+  updateCartDisplay();
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  showSlides();
-});
+function updateCartDisplay() {
+  const cartItemsElement = document.getElementById("cart-items");
+  const totalCostElement = document.getElementById("total-cost");
+
+  // Clear existing cart items
+  cartItemsElement.innerHTML = "";
+
+  let totalCost = 0;
+
+  // Loop through the cart and update the display
+  cart.forEach((item) => {
+    const listItem = document.createElement("li");
+
+    // Create elements for quantity controls
+    const quantityControls = document.createElement("div");
+    quantityControls.innerHTML = `
+      <button class="quantity-btn" onclick="changeQuantity(${item.id}, -1)">-</button>
+      <span>${item.quantity}</span>
+      <button class="quantity-btn" onclick="changeQuantity(${item.id}, 1)">+</button>
+      <button class="remove-btn" onclick="removeItem(${item.id})">Remove</button>
+    `;
+
+    listItem.innerHTML = `
+      <span>${item.name}</span>
+      ${quantityControls.outerHTML}
+      <span>$${(item.price * item.quantity).toFixed(2)}</span>
+    `;
+
+    cartItemsElement.appendChild(listItem);
+
+    totalCost += item.price * item.quantity;
+  });
+
+  // Update the total cost display
+  totalCostElement.textContent = totalCost.toFixed(2);
+}
+
+function changeQuantity(itemId, change) {
+  const itemIndex = cart.findIndex((item) => item.id === itemId);
+
+  if (itemIndex !== -1) {
+    cart[itemIndex].quantity += change;
+
+    // Ensure quantity is not less than 1
+    if (cart[itemIndex].quantity < 1) {
+      cart[itemIndex].quantity = 1;
+    }
+
+    // Save updated cart to local storage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartDisplay();
+  }
+}
+
+function removeItem(itemId) {
+  cart = cart.filter((item) => item.id !== itemId);
+
+  // Save updated cart to local storage
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCartDisplay();
+}
+
+// Call updateCartDisplay on page load to display any existing items in the cart
+document.addEventListener("DOMContentLoaded", updateCartDisplay);

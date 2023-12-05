@@ -1,0 +1,58 @@
+/* Add this code to the existing checkout.css file */
+
+#cart {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+#cart h2 {
+  color: #ff7f00;
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-items li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+button.quantity-btn {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.quantity-btn:hover {
+  background-color: #45a049;
+}
+
+button.remove-btn {
+  background-color: #f44336;
+  color: white;
+  border: 1px solid #f44336;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.remove-btn:hover {
+  background-color: #d32f2f;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}

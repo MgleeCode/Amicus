@@ -1,3 +1,18 @@
-.slideshowcontainer {
+.slideshow-container {
   border: 1px dotted red;
+  margin-top: 40px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.slideshowsize {
+  width: 100%;
+  height: auto;
 }
