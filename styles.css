@@ -6,7 +6,7 @@ body {
 
 .orange-bar {
   background-color: #ff7f00;
-  height: 75px;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -14,40 +14,39 @@ body {
 }
 .bottombar {
   background-color: #ff7f00;
-  height: 85px;
+  height: auto;
   width: 100%;
+  border: 1px solid #ff7f00;
 }
 .uselesstext {
   padding: 2px;
   color: white;
-  font-size: larger;
+  font-size: calc(10px + 1vw);
   font-weight: bold;
 }
 .uselesstext2 {
   padding: 2px;
   color: white;
-  font-size: smaller;
+  font-size: calc(5px + 0.5vw);
   font-style: italic;
+  margin-bottom: 3%;
 }
 .nav-link {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: calc(10px + 1vw);
+  padding: 1%;
 }
 .titlehead {
   display: flex;
+  width: 100%;
   justify-content: space-between;
-  padding: 5px;
 }
 .content-container {
-  margin: 0px;
-  padding: 0px;
-  width: 600px;
-  height: 150px;
+  width: 50%;
+  height: auto;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,22 +59,19 @@ body {
 
 .resized-image-placeholder1 {
   padding: 10px;
-  width: 125px;
-  height: 125px;
+  width: 50%;
+  height: auto;
   max-width: 100%;
   display: block;
   margin: 0 auto;
-  left: 200px;
 }
 .resized-image-placeholder2 {
-  width: 400px;
+  width: 70%;
   display: block;
-  margin: 0 auto;
-  left: 100px;
 }
 .orderbutton {
-  width: 220px;
-  height: 80px;
+  width: 15%;
+  height: 30%;
   border-radius: 60px;
   background-color: #ff7f00;
   margin: 22px;
@@ -85,8 +81,10 @@ body {
   align-items: center;
 }
 .orderword {
-  font-size: larger;
+  font-size: calc(8px + 1.6vw);
+  margin: 5%;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  text-decoration: none;
   font-weight: bolder;
 }

@@ -1,8 +1,6 @@
-/* Add this code to the existing checkout.css file */
-
 #cart {
-  margin: 20px;
-  padding: 20px;
+  margin: 2.5%;
+  padding: 2.5%;
   border: 1px solid #ddd;
   border-radius: 10px;
 }
@@ -16,29 +14,25 @@
   padding: 0;
 }
 
-#cart-items li {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
 button.quantity-btn {
-  background-color: #4caf50;
+  background-color: #ff7f00;
   color: white;
-  border: 1px solid #4caf50;
+  border: 1px solid #ff7f00;
   padding: 5px 10px;
+  margin-right: 10px;
   margin-left: 10px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 button.quantity-btn:hover {
-  background-color: #45a049;
+  background-color: #e67300;
 }
 
 button.remove-btn {
-  background-color: #f44336;
+  background-color: #ff7f00;
   color: white;
-  border: 1px solid #f44336;
+  border: 1px solid #ff7f00;
   padding: 5px 10px;
   margin-left: 10px;
   cursor: pointer;
@@ -46,7 +40,7 @@ button.remove-btn {
 }
 
 button.remove-btn:hover {
-  background-color: #d32f2f;
+  background-color: #e67300;
 }
 
 #cart-items li {
@@ -55,4 +49,23 @@ button.remove-btn:hover {
   align-items: center;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+#proceedBtn {
+  background-color: #4caf50; /* Green color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Change to block to center */
+  margin: auto; /* Set margin to auto for centering */
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#proceedBtn:hover {
+  background-color: #45a049; /* Darker green on hover */
 }

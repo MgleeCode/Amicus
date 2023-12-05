@@ -24,9 +24,7 @@
         />
       </div>
       <div class="orderbutton">
-        <div class="orderword">
-          <a href="checkout.html" class="nav-link">Checkout</a>
-        </div>
+        <a href="checkout.html" class="orderword">Checkout</a>
       </div>
     </div>
 
@@ -38,9 +36,14 @@
       <a href="ourstory.html" class="nav-link">Our Story</a>
     </div>
     <div class="menupage">
-      <h1>Wings</h1>
+      <div class="menutitleheads">Wings</div>
       <article id="wings" class="menudisplay">
-        <div class="menubox" id="wings1" data-item-id="1">
+        <div
+          class="menubox"
+          data-item-id="1"
+          data-item-name="6pc Wings"
+          data-item-price="11.90"
+        >
           <h3>6pc Wings</h3>
           <img src="wings1.png" alt="Wings1" class="resized-menu" />
           <p>Price: $11.90</p>
@@ -48,7 +51,12 @@
             Add to Cart
           </button>
         </div>
-        <div class="menubox" id="wings2" data-item-id="2">
+        <div
+          class="menubox"
+          data-item-id="2"
+          data-item-name="12pc Wings"
+          data-item-price="16.90"
+        >
           <h3>12pc Wings</h3>
           <img src="wings2.png" alt="Wings2" class="resized-menu" />
           <p>Price: $16.90</p>
@@ -56,11 +64,181 @@
             Add to Cart
           </button>
         </div>
-        <div class="menubox" id="wings3" data-item-id="3">
+        <div
+          class="menubox"
+          data-item-id="3"
+          data-item-name="24pc Wings"
+          data-item-price="21.90"
+        >
           <h3>24pc Wings</h3>
-          <img src="wings3.png" alt="Wings3" class="resized-menu" />
+          <img src="wings1.png" alt="Wings1" class="resized-menu" />
           <p>Price: $21.90</p>
           <button onclick="addToCart(3)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+      </article>
+      <div class="menutitleheads">Chicken</div>
+      <article id="chicken" class="menudisplay">
+        <div
+          class="menubox"
+          data-item-id="4"
+          data-item-name="2pc Chicken Meal"
+          data-item-price="12.90"
+        >
+          <h3>2pc Chicken Meal</h3>
+          <img src="chicken1.png" alt="Chicken1" class="resized-menu" />
+          <p>Price: $12.90</p>
+          <button onclick="addToCart(4)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="menubox"
+          data-item-id="5"
+          data-item-name="3pc Chicken Meal"
+          data-item-price="17.90"
+        >
+          <h3>3pc Chicken Meal</h3>
+          <img src="chicken2.png" alt="Chicken2" class="resized-menu" />
+          <p>Price: $16.90</p>
+          <button onclick="addToCart(5)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="menubox"
+          data-item-id="6"
+          data-item-name="4pc Chicken Meal"
+          data-item-price="22.90"
+        >
+          <h3>4pc Chicken Meal</h3>
+          <img src="chicken3.png" alt="Chicken3" class="resized-menu" />
+          <p>Price: $22.90</p>
+          <button onclick="addToCart(6)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+      </article>
+      <div class="menutitleheads">Sandwich</div>
+      <article id="sandwich" class="menudisplay">
+        <div
+          class="menubox"
+          data-item-id="7"
+          data-item-name="Classic Chicken Sandwich"
+          data-item-price="9.90"
+        >
+          <h3>Classic Chicken Sandwich</h3>
+          <img src="sandwich1.png" alt="sandwich1" class="resized-menu" />
+          <p>Price: $9.90</p>
+          <button onclick="addToCart(7)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="menubox"
+          data-item-id="8"
+          data-item-name="Blackened Chicken Sandwich"
+          data-item-price="10.90"
+        >
+          <h3>Blackened Chicken Sandwich</h3>
+          <img src="sandwich2.png" alt="sandwich2" class="resized-menu" />
+          <p>Price: $10.90</p>
+          <button onclick="addToCart(8)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="menubox"
+          data-item-id="9"
+          data-item-name="Bacon & Cheese Chicken Sandwich"
+          data-item-price="14.90"
+        >
+          <h3>Bacon & Cheese Chicken Sandwich</h3>
+          <img src="sandwich3.png" alt="sandwich3" class="resized-menu" />
+          <p>Price: $14.90</p>
+          <button onclick="addToCart(9)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="menubox"
+          data-item-id="10"
+          data-item-name="Blackened Bacon & Cheese Chicken Sandwich"
+          data-item-price="15.90"
+        >
+          <h3>Blackened Bacon & Cheese Chicken Sandwich</h3>
+          <img src="sandwich4.png" alt="sandwich4" class="resized-menu" />
+          <p>Price: $15.90</p>
+          <button onclick="addToCart(10)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+      </article>
+      <div class="menutitleheads">Nuggets</div>
+      <article id="nuggets" class="menudisplay">
+        <div
+          class="menubox"
+          data-item-id="11"
+          data-item-name="8pc Nuggets"
+          data-item-price="8.90"
+        >
+          <h3>8pc Nuggets</h3>
+          <img src="nuggets1.png" alt="nuggets1" class="resized-menu" />
+          <p>Price: $8.90</p>
+          <button onclick="addToCart(11)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="menubox"
+          data-item-id="12"
+          data-item-name="12pc Nuggets"
+          data-item-price="12.90"
+        >
+          <h3>12pc Nuggets</h3>
+          <img src="nuggets2.png" alt="nuggets2" class="resized-menu" />
+          <p>Price: $12.90</p>
+          <button onclick="addToCart(12)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="menubox"
+          data-item-id="13"
+          data-item-name="24pc Nuggets"
+          data-item-price="22.90"
+        >
+          <h3>24pc Nuggets</h3>
+          <img src="nuggets3.png" alt="nuggets3" class="resized-menu" />
+          <p>Price: $22.90</p>
+          <button onclick="addToCart(13)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="menubox"
+          data-item-id="14"
+          data-item-name="36pc Nuggets"
+          data-item-price="29.90"
+        >
+          <h3>36pc Nuggets</h3>
+          <img src="nuggets4.png" alt="nuggets4" class="resized-menu" />
+          <p>Price: $29.90</p>
+          <button onclick="addToCart(14)" class="add-to-cart-btn">
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="menubox"
+          data-item-id="15"
+          data-item-name="48pc Nuggets"
+          data-item-price="36.90"
+        >
+          <h3>48pc Nuggets</h3>
+          <img src="nuggets5.png" alt="nuggets4" class="resized-menu" />
+          <p>Price: $36.90</p>
+          <button onclick="addToCart(15)" class="add-to-cart-btn">
             Add to Cart
           </button>
         </div>

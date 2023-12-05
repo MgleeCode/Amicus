@@ -1,30 +1,29 @@
+body {
+  align-items: center;
+}
 .promotextbox {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
-  padding: 20px;
+  text-align: center;
+  margin: 2%;
 }
 .promotext {
   color: #ff7f00;
-  font-size: 50px;
+  font-size: calc(15px + 3vw);
   font-weight: bolder;
 }
 .promotext2 {
-  width: 700px;
-  font-size: 20px;
-  margin: 10px;
+  width: 60%;
+  font-size: calc(3px + 1.5vw);
+  margin: 1%;
   font-weight: bold;
 }
-.promopics {
+
+.promopic {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 10px;
-}
-.promopic img {
-  padding: 20px;
-  height: 500px;
-  width: auto;
-  border-radius: 60px;
+  width: 100%;
+  margin-bottom: 3%;
 }

@@ -1,15 +1,67 @@
-// Load cart data from local storage on page load
+console.log("Script is running!");
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+let slideIndex = 0;
+
+// Function to show slides
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change slide every 5 seconds
+}
+
+// Function to change slides manually
+function changeSlide(n) {
+  slideIndex += n;
+  const slides = document.getElementsByClassName("slide");
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  } else if (slideIndex < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+}
+
+document.addEventListener("DOMContentLoaded", showSlides);
+// Function to proceed to the complete page
+function proceedToComplete() {
+  // Check if there are items in the cart
+  let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if (cartItems.length === 0) {
+    // If no items in the cart, alert the user (you can customize this part)
+    alert("Your cart is empty. Please add items before proceeding.");
+  } else {
+    // If items in the cart, empty the cart and navigate to the complete page
+    localStorage.removeItem("cart");
+    window.location.href = "complete.html";
+  }
+}
+
 function addToCart(itemId) {
+  const itemElement = document.querySelector(`[data-item-id="${itemId}"]`);
   const item = {
     id: itemId,
-    name: document.querySelector(`[data-item-id="${itemId}"] h3`).textContent,
-    price: parseFloat(
-      document
-        .querySelector(`[data-item-id="${itemId}"] p`)
-        .textContent.split("$")[1]
-    ),
+    name: itemElement.dataset.itemName,
+    price: parseFloat(itemElement.dataset.itemPrice),
     quantity: 1,
   };
 
@@ -21,7 +73,6 @@ function addToCart(itemId) {
     cart.push(item);
   }
 
-  // Save updated cart to local storage
   localStorage.setItem("cart", JSON.stringify(cart));
 
   updateCartDisplay();
@@ -31,16 +82,12 @@ function updateCartDisplay() {
   const cartItemsElement = document.getElementById("cart-items");
   const totalCostElement = document.getElementById("total-cost");
 
-  // Clear existing cart items
   cartItemsElement.innerHTML = "";
 
   let totalCost = 0;
-
-  // Loop through the cart and update the display
   cart.forEach((item) => {
     const listItem = document.createElement("li");
 
-    // Create elements for quantity controls
     const quantityControls = document.createElement("div");
     quantityControls.innerHTML = `
       <button class="quantity-btn" onclick="changeQuantity(${item.id}, -1)">-</button>
@@ -59,8 +106,6 @@ function updateCartDisplay() {
 
     totalCost += item.price * item.quantity;
   });
-
-  // Update the total cost display
   totalCostElement.textContent = totalCost.toFixed(2);
 }
 
@@ -70,12 +115,10 @@ function changeQuantity(itemId, change) {
   if (itemIndex !== -1) {
     cart[itemIndex].quantity += change;
 
-    // Ensure quantity is not less than 1
     if (cart[itemIndex].quantity < 1) {
       cart[itemIndex].quantity = 1;
     }
 
-    // Save updated cart to local storage
     localStorage.setItem("cart", JSON.stringify(cart));
 
     updateCartDisplay();
@@ -85,11 +128,9 @@ function changeQuantity(itemId, change) {
 function removeItem(itemId) {
   cart = cart.filter((item) => item.id !== itemId);
 
-  // Save updated cart to local storage
   localStorage.setItem("cart", JSON.stringify(cart));
 
   updateCartDisplay();
 }
 
-// Call updateCartDisplay on page load to display any existing items in the cart
 document.addEventListener("DOMContentLoaded", updateCartDisplay);
